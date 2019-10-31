@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" android:id="@+id/group1">
 <item android:id="@+id/menu_Item_Profile" android:title="@string/menu_profile"/>
-    <group>
     <item android:id="@+id/menu_item_myOrder" android:title="@string/menu_myorder"/>
     <item android:id="@+id/menu_item_setting" android:title="@string/menu_Setting"/>
     </group>
+    <group android:checkableBehavior="none" android:id="@+id/menu_nxt_sec" >
+
     <item android:id="@+id/menu_item_signout" android:title="@string/menu_signout"/>
+    </group>
 </menu>
