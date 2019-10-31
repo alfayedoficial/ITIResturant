@@ -25,4 +25,10 @@
     <string name="menu_myorder">My Order</string>
     <string name="menu_Setting">Setting</string>
     <string name="menu_signout">Sign out</string>
+<!--     Display Item Activity-->
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="number">Number</string>
+    <string name="total">Total</string>
+    <string name="orderNow">Order Now</string>
 </resources>

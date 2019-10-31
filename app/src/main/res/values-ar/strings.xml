@@ -3,29 +3,35 @@
     <string name="app_name"> مطعم ITI</string>
 
     <!--	 Sign in Activity-->
-    <string name="signin">Sign In</string>
-    <string name="createanaccount">Create an Account</string>
-    <string name="cancel">Cancel</string>
-    <string name="welcomeback">Welcome Back</string>
-    <string name="email">E-mail address</string>
-    <string name="password">Password</string>
-    <string name="forgetpassword">Forget Password ?</string>
-    <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="signin"> تسجيل دخول </string>
+    <string name="createanaccount">حساب جديد</string>
+    <string name="cancel">إلغاء</string>
+    <string name="welcomeback">مرحبا مجددا </string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة السر </string>
+    <string name="forgetpassword">هل نسيت كلمة السر ؟</string>
+    <string name="sign_in_with_google">تسجيل دخول من خلال جوجل</string>
     <!--	 Sign up Activity-->
-    <string name="e_mail">Email</string>
-    <string name="welcome_to_togo_list"> Welcome to ToGo List</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="username">Username</string>
-    <string name="confirmPassword">Confirm Password</string>
-    <string name="sign_up_with_google">Sign Up With Google</string>
+    <string name="e_mail">البريد الإلكتروني</string>
+    <string name="welcome_to_togo_list"> مرحبا في مطعم ITI</string>
+    <string name="sign_up">حساب جديد</string>
+    <string name="username">إسم المستخدم </string>
+    <string name="confirmPassword">تأكيد كلمة السر </string>
+    <string name="sign_up_with_google">تسجيل جديد من خلال جوجل</string>
     <string name="privacy_policy"><![CDATA[By clicking the sign up button , you agree to our ]]></string>
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policybutton">Privacy Policy</string>
     <string name="and">and</string>
     <!-- Home Activity -->
-    <string name="menu_profile">Profile</string>
-    <string name="menu_myorder">My Order</string>
-    <string name="menu_Setting">Setting</string>
-    <string name="menu_signout">Sign out</string>
+    <string name="menu_profile">البروفايل</string>
+    <string name="menu_myorder">طلبي </string>
+    <string name="menu_Setting">الإعدادات</string>
+    <string name="menu_signout">تسجيل خروج</string>
+    <!--     Display Item Activity-->
+    <string name="description">الوصف</string>
+    <string name="price">السعر</string>
+    <string name="number">العدد</string>
+    <string name="total">الإجمالي</string>
+    <string name="orderNow">اطلب الآن</string>
 
 </resources>
