@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.tot.itiresturant.R
 import com.tot.itiresturant.model.CUSTOMER_VIEW
 import com.tot.itiresturant.model.ChatMessage
