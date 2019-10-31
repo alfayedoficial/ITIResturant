@@ -43,6 +43,14 @@
     <string name="payynow">Pay Now</string>
     <string name="item">Name Item</string>
     <string name="owner_message">"شكرا لتواصلكم بمطعمنا \\n سيتم التواصل معكم من قبل واحد من فريقنا "</string>
+    <string name="language">Language</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
 
 
+    <string name="emailRequired">الإيميل مطلوب!</string>
+    <string name="passwordRequired">كلمة السر مطلوبة!</string>
+    <string name="confPasswordRequired">تأكيد كلمة السر مطلوبة!</string>
+    <string name="incompatiblePassword">كلمتي السر غير متطابقتين!</string>
+    <string name="networkError">افتح بيانات الهاتف أو اتصل بـ الواي فاي!</string>
 </resources>
