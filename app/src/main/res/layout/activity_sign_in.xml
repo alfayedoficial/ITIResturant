@@ -7,7 +7,6 @@
     tools:context=".view.activity.SignInActivity">
 
 
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -23,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editText_email_Signin"
+        android:id="@+id/editText_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -53,9 +52,9 @@
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
         app:errorTextAppearance="@style/textinputlayoutErrorAppearance"
-        app:layout_constraintEnd_toEndOf="@+id/editText_email_Signin"
-        app:layout_constraintStart_toStartOf="@+id/editText_email_Signin"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email_Signin"
+        app:layout_constraintEnd_toEndOf="@+id/editText_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -69,12 +68,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnSignIn"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_sign_in"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
         android:text="@string/signin"
+        android:textColor="@color/background_offwhite"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editText_password_Signin"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editText_password_Signin"
         app:layout_constraintTop_toBottomOf="@+id/editText_password_Signin" />
 
