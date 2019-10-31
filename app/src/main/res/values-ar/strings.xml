@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ITI Resturant</string>
+    <string name="app_name"> مطعم ITI</string>
+
     <!--	 Sign in Activity-->
     <string name="signin">Sign In</string>
     <string name="createanaccount">Create an Account</string>
@@ -20,4 +22,10 @@
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policybutton">Privacy Policy</string>
     <string name="and">and</string>
+    <!-- Home Activity -->
+    <string name="menu_profile">Profile</string>
+    <string name="menu_myorder">My Order</string>
+    <string name="menu_Setting">Setting</string>
+    <string name="menu_signout">Sign out</string>
+
 </resources>
