@@ -42,8 +42,7 @@
     <string name="totalprice">Total Price :</string>
     <string name="payynow">Pay Now</string>
     <string name="item">Name Item</string>
-
-
+    <string name="owner_message">"شكرا لتواصلكم بمطعمنا \\n سيتم التواصل معكم من قبل واحد من فريقنا "</string>
 
 
 </resources>

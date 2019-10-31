@@ -39,5 +39,6 @@
     <string name="tax">14% :</string>
     <string name="totalprice">Total Price :</string>
     <string name="payynow">Pay Now</string>
+    <string name="owner_message">Thank you for contacting our restaurant \\n One of our Team will contact you shortly</string>
     <string name="item">Name Item</string>
 </resources>
