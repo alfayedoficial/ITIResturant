@@ -2,6 +2,7 @@ package com.tot.itiresturant.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,8 +26,10 @@ lateinit var homeAdapter: HomeAdapter
         orderViewModel= ViewModelProviders.of(this).get(OrederViewModel::class.java)
         home_RecyclerView.layoutManager=GridLayoutManager(this,2)
         home_RecyclerView.addItemDecoration(GridItemDecoration(10, 2))
-        homeAdapter=HomeAdapter(this,this)
+        homeAdapter= HomeAdapter(this,this)
         home_RecyclerView.adapter=homeAdapter
+        orderViewModel.getAllMenuItems().observe(this, Observer {
 
+        })
     }
 }
