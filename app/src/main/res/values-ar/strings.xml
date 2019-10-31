@@ -3,56 +3,61 @@
     <string name="app_name"> مطعم ITI</string>
 
     <!--	 Sign in Activity-->
-    <string name="signin">Sign In</string>
-    <string name="createanaccount">Create an Account</string>
-    <string name="cancel">Cancel</string>
-    <string name="welcomeback">Welcome Back</string>
-    <string name="email">E-mail address</string>
-    <string name="password">Password</string>
-    <string name="forgetpassword">Forget Password ?</string>
+    <string name="signin">تسجيل دخول</string>
+    <string name="createanaccount">انشاء حساب جديد</string>
+    <string name="cancel">الغاء</string>
+    <string name="welcomeback">مرحبا مجددا</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forgetpassword">هل نسيت كلمة المرور؟ </string>
     <string name="sign_in_with_google">Sign In With Google</string>
     <!--	 Sign up Activity-->
-    <string name="e_mail">Email</string>
+    <string name="e_mail">البريد الإلكتروني</string>
     <string name="welcome_to_togo_list"> Welcome to ToGo List</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="username">Username</string>
-    <string name="confirmPassword">Confirm Password</string>
+    <string name="sign_up">تسجيل جديد</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="confirmPassword">تأكيد كلمة المرور</string>
     <string name="sign_up_with_google">Sign Up With Google</string>
     <string name="privacy_policy"><![CDATA[By clicking the sign up button , you agree to our ]]></string>
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policybutton">Privacy Policy</string>
     <string name="and">and</string>
     <!-- Home Activity -->
-    <string name="menu_profile">Profile</string>
-    <string name="menu_myorder">My Order</string>
-    <string name="menu_Setting">Setting</string>
-    <string name="menu_signout">Sign out</string>
+    <string name="menu_profile">البروفايل</string>
+    <string name="menu_myorder">طلبي</string>
+    <string name="menu_Setting">الإعدادات</string>
+    <string name="menu_signout">تسجيل خروج</string>
     <!--     Display Item Activity-->
-    <string name="description">Description</string>
-    <string name="price">Price</string>
-    <string name="number">Number</string>
-    <string name="total">Total</string>
-    <string name="orderNow">Order Now</string>
+    <string name="description">الوصف</string>
+    <string name="price">السعر </string>
+    <string name="number">العدد</string>
+    <string name="total">الإجمالي</string>
+    <string name="orderNow">اطلب الآن</string>
+    <!--  profile  -->
+    <string name="name">الاسم</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="address">العنوان</string>
+    <string name="update">تعديل</string>
     <!--    Chat Activity-->
-    <string name="sendChat">Send</string>
-    <string name="edittextchat">Enter Your Message</string>
+    <string name="sendChat">إرسال</string>
+    <string name="edittextchat">أدخل رسالتك</string>
     <!--    Cart Activity-->
-    <string name="totalcart">Total :</string>
+    <string name="totalcart">الإجمالي : </string>
     <string name="tax">14% :</string>
-    <string name="totalprice">Total Price :</string>
-    <string name="payynow">Pay Now</string>
-    <string name="item">Name Item</string>
+    <string name="totalprice">السعر الإجمالي : </string>
+    <string name="payynow">ادفع الآن </string>
+    <string name="item">اسم العنصر </string>
     <string name="owner_message">"شكرا لتواصلكم بمطعمنا \\n سيتم التواصل معكم من قبل واحد من فريقنا "</string>
-    <string name="language">Language</string>
-    <string name="arabic">Arabic</string>
-    <string name="english">English</string>
+    <string name="language">اللغة</string>
+    <string name="arabic">اللغة العربية </string>
+    <string name="english">اللغة الإنجليزية</string>
 
 
-    <string name="emailRequired">الإيميل مطلوب!</string>
-    <string name="passwordRequired">كلمة السر مطلوبة!</string>
-    <string name="confPasswordRequired">تأكيد كلمة السر مطلوبة!</string>
-    <string name="incompatiblePassword">كلمتي السر غير متطابقتين!</string>
+    <string name="emailRequired">البريد الإلكتروني مطلوب!</string>
+    <string name="passwordRequired">كلمة المرور مطلوبة!</string>
+    <string name="confPasswordRequired">تأكيد كلمة المرور مطلوبة!</string>
+    <string name="incompatiblePassword">كلمتي المرور غير متطابقتين!</string>
     <string name="networkError">افتح بيانات الهاتف أو اتصل بـ الواي فاي!</string>
-    <string name="lengthPassword">كلمة السر يجب أن تكون على الأقل 6 حروف!</string>
+    <string name="lengthPassword">كلمة المرور يجب أن تكون على الأقل 6 حروف!</string>
     <string name="signupSuccess">تم التسجيل بـ نجاح!</string>
 </resources>
