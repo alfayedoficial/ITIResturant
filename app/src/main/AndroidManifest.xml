@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartActivity"></activity>
-        <activity android:name=".MorderActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".FirstActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".view.activity.CartActivity"></activity>
+        <activity android:name=".view.activity.MorderActivity" />
+        <activity android:name=".view.activity.SettingsActivity" />
+        <activity android:name=".view.activity.ProfileActivity" />
+        <activity android:name=".view.activity.SignUpActivity" />
+        <activity android:name=".view.activity.SignInActivity" />
+        <activity android:name=".view.activity.FirstActivity" />
+        <activity android:name=".view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

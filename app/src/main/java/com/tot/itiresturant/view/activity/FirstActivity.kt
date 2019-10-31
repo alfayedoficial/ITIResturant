@@ -1,12 +1,13 @@
-package com.tot.itiresturant
+package com.tot.itiresturant.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.tot.itiresturant.R
 
-class CartActivity : AppCompatActivity() {
+class FirstActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart)
+        setContentView(R.layout.activity_first)
     }
 }
