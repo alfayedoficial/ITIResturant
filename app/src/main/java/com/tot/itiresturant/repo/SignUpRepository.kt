@@ -8,11 +8,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.tot.itiresturant.R
 
 class SignUpRepository (val application: Application) {
-    internal var mAuth: FirebaseAuth
-
-    init {
-        mAuth = FirebaseAuth.getInstance()
-    }
+    internal var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
     fun newUser(emailAddress:String, password:String){
         mAuth.createUserWithEmailAndPassword(emailAddress, password)
