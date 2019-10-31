@@ -31,4 +31,7 @@
     <string name="number">Number</string>
     <string name="total">Total</string>
     <string name="orderNow">Order Now</string>
+<!--    Chat Activity-->
+    <string name="sendChat">Send</string>
+    <string name="edittextchat">Enter Your Message</string>
 </resources>
