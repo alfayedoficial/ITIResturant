@@ -49,8 +49,9 @@
     <string name="address">Address</string>
     <string name="update">Update</string>
 
-
-
-
-
+    <string name="emailRequired">Email Required!</string>
+    <string name="passwordRequired">Password Required!</string>
+    <string name="confPasswordRequired">Confirm Password Required!</string>
+    <string name="incompatiblePassword">Two passwords are incompatible!</string>
+    <string name="networkError">Open your Data or connect ro wifi!</string>
 </resources>
