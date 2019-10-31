@@ -49,6 +49,8 @@
     <string name="item">اسم العنصر </string>
     <string name="owner_message">"شكرا لتواصلكم بمطعمنا \\n سيتم التواصل معكم من قبل واحد من فريقنا "</string>
     <string name="language">اللغة</string>
+    <string name="choose_language">اختيار اللغةِ</string>
+    <string name="ok"> موافق </string>
     <string name="arabic">اللغة العربية </string>
     <string name="english">اللغة الإنجليزية</string>
 
