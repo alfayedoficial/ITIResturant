@@ -13,7 +13,7 @@ class SignUpRepository (val application: Application) {
     fun newUser(emailAddress:String, password:String){
         mAuth.createUserWithEmailAndPassword(emailAddress, password)
             .addOnSuccessListener {
-                Toast.makeText(application.applicationContext, R.string.signupSuccess, Toast.LENGTH_SHORT)
+                Toast.makeText(application.applicationContext, R.string.signupSuccess, Toast.LENGTH_SHORT).show()
             }
     }
 }

@@ -9,6 +9,7 @@ import com.tot.itiresturant.viewmodel.MyOrderViewModel
 import kotlinx.android.synthetic.main.activity_display_item.*
 import kotlinx.android.synthetic.main.toolbar.*
 import android.text.Editable
+import com.bumptech.glide.Glide
 
 class DisplayItemActivity : AppCompatActivity() {
 
@@ -33,6 +34,7 @@ class DisplayItemActivity : AppCompatActivity() {
         Glide.with(this)
             .load(orderData.image)
             .into(meal)
+
         description.text = orderData.description
         price.text = orderData.price.toString()
         number_value.addTextChangedListener(object : TextWatcher {
