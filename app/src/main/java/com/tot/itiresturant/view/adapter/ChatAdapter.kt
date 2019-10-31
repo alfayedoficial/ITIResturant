@@ -40,7 +40,6 @@ class ChatAdapter(var context: Context) : RecyclerView.Adapter<ChatAdapter.MainV
             holder.message.text = messagesList[position].userName
             Glide.with(context)
                 .load(messagesList[position].userImage) //3
-                .centerCrop() //4
                 .into(holder.userImage) //8
             holder.userImage.visibility = View.VISIBLE
             holder.ownerImage.visibility = View.GONE
