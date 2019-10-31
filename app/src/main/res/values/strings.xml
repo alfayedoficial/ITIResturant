@@ -56,4 +56,7 @@
     <string name="networkError">Open your Data or connect ro wifi!</string>
     <string name="lengthPassword">Password length must be at least 6 characters!</string>
     <string name="signupSuccess">Signup Successfully!</string>
+    <string name="errorSignUp">Failed when sign up!\nTry again!</string>
+    <string name="signinSuccess">Login Successfully!</string>
+    <string name="errorSignIn">Failed when login!\nEmail, pasword, or both are incorrect!</string>
 </resources>

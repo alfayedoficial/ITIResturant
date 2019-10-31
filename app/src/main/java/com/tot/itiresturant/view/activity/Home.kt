@@ -33,6 +33,7 @@ lateinit var navigationView: NavigationView
         home_RecyclerView.addItemDecoration(GridItemDecoration(10, 2))
         homeAdapter= HomeAdapter(this,this)
         home_RecyclerView.adapter=homeAdapter
+        orderViewModel.setHome(this)
         orderViewModel.getAllMenuItems().observe(this, Observer {
             homeAdapter.setData(it as ArrayList<Order>)
             homeAdapter.notifyDataSetChanged()

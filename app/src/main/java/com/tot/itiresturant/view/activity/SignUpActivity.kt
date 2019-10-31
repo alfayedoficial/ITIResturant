@@ -46,7 +46,6 @@ class SignUpActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.networkError, Toast.LENGTH_SHORT).show()
         } else {
             signupViewModel.newUser(emailAddress.text.toString().trim(), password.text.toString().trim())
-            startActivity(Intent(this, SignInActivity::class.java))
         }
     }
 
@@ -55,5 +54,14 @@ class SignUpActivity : AppCompatActivity() {
             this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
         return connectivityManager.activeNetworkInfo != null && connectivityManager.activeNetworkInfo!!.isConnected
+    }
+
+    fun setMsg(msg: String){
+        if (msg == "signUp success"){
+            Toast.makeText(this, R.string.signupSuccess, Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, SignInActivity::class.java))
+        } else {
+            Toast.makeText(this, R.string.errorSignUp, Toast.LENGTH_SHORT).show()
+        }
     }
 }

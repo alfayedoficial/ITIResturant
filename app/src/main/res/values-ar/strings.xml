@@ -55,4 +55,7 @@
     <string name="networkError">افتح بيانات الهاتف أو اتصل بـ الواي فاي!</string>
     <string name="lengthPassword">كلمة السر يجب أن تكون على الأقل 6 حروف!</string>
     <string name="signupSuccess">تم التسجيل بـ نجاح!</string>
+    <string name="errorSignUp">فشل أثناء التسجيل!\nحاول مجدداََ</string>
+    <string name="signinSuccess">تم تسجيل الدخول بـ نجاح!</string>
+    <string name="errorSignIn">فشل الدخول!\nالإيميل أو كلمة المرور غير صحيحة!</string>
 </resources>
