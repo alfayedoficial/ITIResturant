@@ -2,4 +2,6 @@
     <string name="app_name">ITI Resturant</string>
 <!--    SignIn Activity-->
     <string name="signin">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
