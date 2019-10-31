@@ -41,5 +41,16 @@
     <string name="payynow">Pay Now</string>
     <string name="owner_message">Thank you for contacting our restaurant \\n One of our Team will contact you shortly</string>
     <string name="item">Name Item</string>
+    <string name="language">Language</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="update">Update</string>
+
+
+
+
 
 </resources>
