@@ -10,8 +10,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/meal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,10 +31,10 @@
         android:text="@string/description"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/meal" />
 
-    <TextView
-        android:id="@+id/txtDescription"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:text="TextView" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,10 +51,10 @@
         android:text="@string/price"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
-    <TextView
-        android:id="@+id/txtPrice"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -64,7 +64,7 @@
         tools:text="TextView" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editText_Number"
+        android:id="@+id/number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -83,7 +83,7 @@
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,10 +92,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Number" />
+        app:layout_constraintTop_toBottomOf="@+id/number" />
 
-    <TextView
-        android:id="@+id/textView9"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -104,17 +104,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:text="TextView" />
 
-    <Button
-        android:id="@+id/btnOrderNow"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:text="@string/orderNow"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintEnd_toEndOf="@+id/total"
+        app:layout_constraintStart_toStartOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
