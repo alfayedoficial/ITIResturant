@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.tot.itiresturant.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import android.content.Context.CONNECTIVITY_SERVICE
+import android.content.Intent
 import androidx.core.content.ContextCompat.getSystemService
 import android.net.ConnectivityManager
 import androidx.core.app.ComponentActivity.ExtraData
@@ -42,7 +43,7 @@ class SignUpActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.networkError, Toast.LENGTH_SHORT)
         } else {
             signupViewModel.newUser(emailAddress.text.toString().trim(), password.text.toString().trim())
-
+            startActivity(Intent(this, SignInActivity::class.java))
         }
     }
 
