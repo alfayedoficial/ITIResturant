@@ -30,21 +30,22 @@ class DisplayItemActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = orderData.name
 
-//        meal.setImageBitmap()
+        Glide.with(this)
+            .load(orderData.image)
+            .into(meal)
         description.text = orderData.description
         price.text = orderData.price.toString()
         number_value.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
-
+                val totalValue =  s.toString().toDouble() * orderData.price
+                total.text = totalValue.toString()
             }
 
-            override fun beforeTextChanged(
-                s: CharSequence, start: Int, count: Int, after: Int) {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
             }
 
-            override fun onTextChanged(
-                s: CharSequence, start: Int, before: Int, count: Int) {
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
             }
         })
 
