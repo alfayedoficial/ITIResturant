@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -34,6 +35,16 @@ class ChatActivity : AppCompatActivity() {
             editTextChat.setText("")
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        viewModel.getAllMessages().observe(this,
+            Observer<List<ChatMessage>> { t ->
+                if (t != null) {
+                    adapter.setAdapter(t)
+                }
+            })
     }
 
     internal class MyViewModelFactory(private val mActivity: Activity) : ViewModelProvider.Factory {
