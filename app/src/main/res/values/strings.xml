@@ -31,4 +31,14 @@
     <string name="number">Number</string>
     <string name="total">Total</string>
     <string name="orderNow">Order Now</string>
+<!--    Chat Activity-->
+    <string name="sendChat">Send</string>
+    <string name="edittextchat">Enter Your Message</string>
+<!--    Cart Activity-->
+    <string name="totalcart">Total :</string>
+    <string name="tax">14% :</string>
+    <string name="totalprice">Total Price :</string>
+    <string name="payynow">Pay Now</string>
+    <string name="owner_message">Thank you for contacting our restaurant \\n One of our Team will contact you shortly</string>
+    <string name="item">Name Item</string>
 </resources>
