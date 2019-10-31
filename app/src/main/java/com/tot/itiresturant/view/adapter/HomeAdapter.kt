@@ -26,7 +26,6 @@ class HomeAdapter(val context: Context, var homeActivity: Activity): RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ReHolder, position: Int) {
-
     }
 
     fun setData(orders: ArrayList<Order>){
