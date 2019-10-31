@@ -16,5 +16,12 @@
         <item name="android:textStyle">bold</item>
         <item name="android:strokeColor">@color/colorheavy</item>
     </style>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+
+    </style>
 
 </resources>
