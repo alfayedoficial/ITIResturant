@@ -20,4 +20,14 @@
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="privacy_policybutton">Privacy Policy</string>
     <string name="and">and</string>
+    
+<!--    Display Item-->
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="number">Number</string>
+    <string name="total">Total</string>
+    <string name="orderNow">Order Now</string>
+
+
+
 </resources>
