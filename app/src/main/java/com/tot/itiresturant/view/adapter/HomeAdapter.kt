@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.tot.itiresturant.R
 import com.tot.itiresturant.model.Order
 import kotlinx.android.synthetic.main.menuitem.view.*
@@ -26,6 +27,11 @@ class HomeAdapter(val context: Context, var homeActivity: Activity): RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ReHolder, position: Int) {
+        holder.name.text=menuItems.get(position).name
+        holder.price.text=menuItems.get(position).price.toString()
+        Glide.with(homeActivity)
+            .load(menuItems.get(position).image)
+            .into(holder.image);
     }
 
     fun setData(orders: ArrayList<Order>){
