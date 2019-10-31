@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.Home"></activity>
+        <activity android:name=".view.activity.Home" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".view.activity.CartActivity" />
         <activity android:name=".view.activity.MorderActivity" />
         <activity android:name=".view.activity.SettingsActivity" />
