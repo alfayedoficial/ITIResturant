@@ -29,13 +29,16 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun signUp(){
         if (emailAddress.text.toString().trim().isEmpty()) {
-            emailAddress.setError(getText(R.string.emailRequired))
+            emailAddress.error = getText(R.string.emailRequired)
             emailAddress.requestFocus()
         } else if (password.text.toString().trim().isEmpty()){
-            password.setError(getText(R.string.passwordRequired))
+            password.error = getText(R.string.passwordRequired)
+            password.requestFocus()
+        } else if (password.text.toString().trim().length < 6){
+            password.error = getText(R.string.lengthPassword)
             password.requestFocus()
         } else if (confPassword.text.toString().trim().isEmpty()){
-            confPassword.setError(getText(R.string.confPasswordRequired))
+            confPassword.error = getText(R.string.confPasswordRequired)
             confPassword.requestFocus()
         } else if (password.text.toString().trim() == confPassword.text.toString().trim()){
             Toast.makeText(this, R.string.incompatiblePassword, Toast.LENGTH_SHORT)
