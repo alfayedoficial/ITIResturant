@@ -41,9 +41,9 @@ class SignUpActivity : AppCompatActivity() {
             confPassword.error = getText(R.string.confPasswordRequired)
             confPassword.requestFocus()
         } else if (password.text.toString().trim() == confPassword.text.toString().trim()){
-            Toast.makeText(this, R.string.incompatiblePassword, Toast.LENGTH_SHORT)
+            Toast.makeText(this, R.string.incompatiblePassword, Toast.LENGTH_SHORT).show()
         } else if (!isNetworkConnected()){
-            Toast.makeText(this, R.string.networkError, Toast.LENGTH_SHORT)
+            Toast.makeText(this, R.string.networkError, Toast.LENGTH_SHORT).show()
         } else {
             signupViewModel.newUser(emailAddress.text.toString().trim(), password.text.toString().trim())
             startActivity(Intent(this, SignInActivity::class.java))
