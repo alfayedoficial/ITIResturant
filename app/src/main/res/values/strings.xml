@@ -39,4 +39,21 @@
     <string name="tax">14% :</string>
     <string name="totalprice">Total Price :</string>
     <string name="payynow">Pay Now</string>
+    <string name="owner_message">Thank you for contacting our restaurant \\n One of our Team will contact you shortly</string>
+    <string name="item">Name Item</string>
+    <string name="language">Language</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="update">Update</string>
+
+    <string name="emailRequired">Email Required!</string>
+    <string name="passwordRequired">Password Required!</string>
+    <string name="confPasswordRequired">Confirm Password Required!</string>
+    <string name="incompatiblePassword">Two passwords are incompatible!</string>
+    <string name="networkError">Open your Data or connect ro wifi!</string>
+    <string name="lengthPassword">Password length must be at least 6 characters!</string>
+    <string name="signupSuccess">Signup Successfully!</string>
 </resources>

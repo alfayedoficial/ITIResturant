@@ -8,19 +8,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.Home"></activity>
-        <activity android:name=".view.activity.CartActivity" />
-        <activity android:name=".view.activity.SettingsActivity" />
-        <activity android:name=".view.activity.ProfileActivity" />
-        <activity android:name=".view.activity.SignUpActivity" />
-        <activity android:name=".view.activity.SignInActivity" />
-        <activity android:name=".view.activity.FirstActivity" />
-        <activity android:name=".view.activity.DisplayItemActivity" />
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity android:name=".view.activity.Home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.CartActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.SignInActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.FirstActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.activity.DisplayItemActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

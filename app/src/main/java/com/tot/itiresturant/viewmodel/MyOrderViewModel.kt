@@ -9,10 +9,10 @@ import com.tot.itiresturant.view.fragment.MyOrderFragment
 
 class MyOrderViewModel() : ViewModel() {
 
-    private var mutableLiveData: MutableLiveData<List<Order>>? = null
+    private lateinit var mutableLiveData: MutableLiveData<List<Order>>
 
-    private var cartActivity: CartActivity? = null
-    private var myOrderFragment: MyOrderFragment? = null
+    private lateinit var cartActivity: CartActivity
+    private lateinit var myOrderFragment: MyOrderFragment
 
     constructor(cartActivity: CartActivity) : this() {
         mutableLiveData = MutableLiveData<List<Order>>()
