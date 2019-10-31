@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.tot.itiresturant.MyOrderPackage.MyOrderViewModel
+import com.tot.itiresturant.viewmodel.MyOrderViewModel
 
 import com.tot.itiresturant.R
 
