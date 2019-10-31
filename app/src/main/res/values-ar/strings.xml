@@ -36,6 +36,11 @@
     <!--    Chat Activity-->
     <string name="sendChat">Send</string>
     <string name="edittextchat">Enter Your Message</string>
+    <!--    Cart Activity-->
+    <string name="totalcart">Total :</string>
+    <string name="tax">14% :</string>
+    <string name="totalprice">Total Price :</string>
+    <string name="payynow">Pay Now</string>
 
 
 
