@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/menu_Item_Profile" android:title="@string/"/>
-    <item android:id="@+id/menu_item_myOrder" android:title="Profile"/>
+<item android:id="@+id/menu_Item_Profile" android:title="@string/menu_profile"/>
+    <item android:id="@+id/menu_item_myOrder" android:title="@string/menu_myorder"/>
+    <item android:id="@+id/menu_item_setting" android:title="@string/menu_Setting"/>
+    <item android:id="@+id/menu_item_signout" android:title="@string/menu_signout"/>
 </menu>
