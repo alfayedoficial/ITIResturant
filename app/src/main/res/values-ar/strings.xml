@@ -53,4 +53,5 @@
     <string name="confPasswordRequired">تأكيد كلمة السر مطلوبة!</string>
     <string name="incompatiblePassword">كلمتي السر غير متطابقتين!</string>
     <string name="networkError">افتح بيانات الهاتف أو اتصل بـ الواي فاي!</string>
+    <string name="lengthPassword">كلمة السر يجب أن تكون على الأقل 6 حروف!</string>
 </resources>

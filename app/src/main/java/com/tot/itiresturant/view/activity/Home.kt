@@ -56,7 +56,7 @@ lateinit var navigationView: NavigationView
                 R.id.menu_Item_Profile -> { }
                 R.id.menu_item_myOrder->{}
                 R.id.menu_item_setting->{}
-
+                R.id.menu_item_signout->{}
             }
             true
 

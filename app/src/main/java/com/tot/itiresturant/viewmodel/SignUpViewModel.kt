@@ -7,4 +7,8 @@ import com.tot.itiresturant.repo.SignUpRepository
 class SignUpViewModel (application: Application) : AndroidViewModel(application) {
 
     private var repository: SignUpRepository = SignUpRepository(application)
+
+    fun newUser(emailAddress:String, password:String){
+        repository.newUser(emailAddress, password)
+    }
 }

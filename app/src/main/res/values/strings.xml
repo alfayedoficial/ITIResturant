@@ -54,4 +54,5 @@
     <string name="confPasswordRequired">Confirm Password Required!</string>
     <string name="incompatiblePassword">Two passwords are incompatible!</string>
     <string name="networkError">Open your Data or connect ro wifi!</string>
+    <string name="lengthPassword">Password length must be at least 6 characters!</string>
 </resources>
