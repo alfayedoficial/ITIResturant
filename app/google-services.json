@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "315380515254",
+    "firebase_url": "https://iti-resturant.firebaseio.com",
+    "project_id": "iti-resturant",
+    "storage_bucket": "iti-resturant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315380515254:android:d880fd167317079d498117",
+        "android_client_info": {
+          "package_name": "com.tot.itiresturant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315380515254-tac0jjb21g5uutgdgsdumfm1ibisi2di.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tot.itiresturant",
+            "certificate_hash": "899738921309fca002fb0440481d71db32cac5ae"
+          }
+        },
+        {
+          "client_id": "315380515254-rqdmvapcagt1mmsdrueeff3a3dsuvbp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxUJkJdml8TUdeKNzZ9xpISIX_nEWRit8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315380515254-rqdmvapcagt1mmsdrueeff3a3dsuvbp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

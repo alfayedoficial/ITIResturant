@@ -41,6 +41,11 @@
     <string name="tax">14% :</string>
     <string name="totalprice">Total Price :</string>
     <string name="payynow">Pay Now</string>
+    <string name="item">Name Item</string>
+    <string name="owner_message">"شكرا لتواصلكم بمطعمنا \\n سيتم التواصل معكم من قبل واحد من فريقنا "</string>
+    <string name="language">Language</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
 
 
 
