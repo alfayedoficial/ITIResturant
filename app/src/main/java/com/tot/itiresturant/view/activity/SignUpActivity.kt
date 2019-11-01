@@ -28,7 +28,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        signupViewModel = ViewModelProviders.of(this,MyViewModelFactory(application)).get(SignUpViewModel::class.java)
+        signupViewModel = ViewModelProviders.of(this,MyViewModelFactory(this)).get(SignUpViewModel::class.java)
 
         btn_sign_up.setOnClickListener{
             signUp()
@@ -73,9 +73,9 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    internal class MyViewModelFactory(var application: Application) : ViewModelProvider.Factory {
+    internal class MyViewModelFactory(var activity: Activity) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return SignUpViewModel(application) as T
+            return SignUpViewModel(activity) as T
         }
     }
 }

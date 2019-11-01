@@ -1,5 +1,6 @@
 package com.tot.itiresturant.view.activity
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.Intent
@@ -24,7 +25,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        signinViewModel = ViewModelProviders.of(this,MyViewModelFactory(application)).get(SignInViewModel::class.java)
+        signinViewModel = ViewModelProviders.of(this,MyViewModelFactory(this)).get(SignInViewModel::class.java)
         btn_sign_in.setOnClickListener{
             signIn()
         }
@@ -60,9 +61,9 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-    internal class MyViewModelFactory(var application: Application) : ViewModelProvider.Factory {
+    internal class MyViewModelFactory(var activity: Activity) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return SignInViewModel(application) as T
+            return SignInViewModel(activity) as T
         }
     }
 }
