@@ -65,4 +65,6 @@
     <string name="errorSignUp">فشل أثناء التسجيل!\nحاول مجدداََ</string>
     <string name="signinSuccess">تم تسجيل الدخول بـ نجاح!</string>
     <string name="errorSignIn">فشل الدخول!\nالإيميل أو كلمة المرور غير صحيحة!</string>
+    <string name="valied_number">رجاءا ادخل الرقم الصحيح</string>
+    <string name="order_incomplete">رجاء انهي عملية طلب الأوردر أولا </string>
 </resources>
