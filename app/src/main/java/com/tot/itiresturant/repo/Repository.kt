@@ -1,5 +1,6 @@
 package com.tot.itiresturant.repo
 
+import android.app.Application
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
@@ -11,7 +12,7 @@ import com.tot.itiresturant.viewmodel.SignUpViewModel
 
 class Repository () {
 
-    private var context: Context? = null
+    private var application: Application? = null
     private var signUpViewModel: SignUpViewModel? = null
     private var signInViewModel: SignInViewModel? = null
     private var mAuth: FirebaseAuth? = null
@@ -21,10 +22,10 @@ class Repository () {
     private var orderArrayList: ArrayList<Order>? = null
     private var messagesArrayList: ArrayList<ChatMessage>? = null
 
-    constructor(context: Context):this(){
-        this.context = context.applicationContext
-        signInViewModel = SignInViewModel(context)
-        signUpViewModel = SignUpViewModel(context)
+    constructor(application: Application):this(){
+        this.application = application
+        signInViewModel = SignInViewModel(application)
+        signUpViewModel = SignUpViewModel(application)
         mAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
         mutableLiveData = MutableLiveData()

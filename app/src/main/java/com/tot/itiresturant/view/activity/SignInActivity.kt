@@ -1,11 +1,15 @@
 package com.tot.itiresturant.view.activity
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.tot.itiresturant.R
 import com.tot.itiresturant.viewmodel.SignInViewModel
 import com.tot.itiresturant.viewmodel.SignUpViewModel
@@ -20,7 +24,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        signinViewModel = SignInViewModel(applicationContext)
+        signinViewModel = ViewModelProviders.of(this,MyViewModelFactory(application)).get(SignInViewModel::class.java)
         btn_sign_in.setOnClickListener{
             signIn()
         }
@@ -53,6 +57,12 @@ class SignInActivity : AppCompatActivity() {
             startActivity(Intent(this, Home::class.java))
         } else {
             Toast.makeText(this, R.string.errorSignIn, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    internal class MyViewModelFactory(var application: Application) : ViewModelProvider.Factory {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return SignInViewModel(application) as T
         }
     }
 }
