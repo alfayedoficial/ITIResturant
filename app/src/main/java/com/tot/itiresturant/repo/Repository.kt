@@ -28,7 +28,7 @@ class Repository () {
     private var mutableLiveData:MutableLiveData<ArrayList<Order>> = MutableLiveData()
     private var msgMutLiveData: MutableLiveData<List<ChatMessage>> = MutableLiveData()
     private var orderArrayList: ArrayList<Order> = arrayListOf(Order())
-    private var notesArrayList: ArrayList<ChatMessage> = arrayListOf(ChatMessage("","","",0))
+    private var messagesArrayList: ArrayList<ChatMessage> = arrayListOf(ChatMessage("","","",0))
 
     fun newUser(emailAddress:String, password:String){
         mAuth.createUserWithEmailAndPassword(emailAddress, password)
@@ -85,20 +85,20 @@ class Repository () {
         return orders as List<Order>
     }
 
-    fun getAllNotes(): MutableLiveData<List<ChatMessage>> {
-        database.child("Notes")
+    fun getAllMessages(): MutableLiveData<List<ChatMessage>> {
+        database.child("Messages")
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                    val note = dataSnapshot.getValue(ChatMessage::class.java)
-                    notesArrayList.add(note!!)
+                    val message = dataSnapshot.getValue(ChatMessage::class.java)
+                    messagesArrayList.add(message!!)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
                     println(""+databaseError.message)
                 }
             })
-        msgMutLiveData.value=notesArrayList
+        msgMutLiveData.value=messagesArrayList
         return msgMutLiveData
     }
 
@@ -121,7 +121,7 @@ class Repository () {
     }
 
     fun sendMessage(message: ChatMessage) {
-
+        database.child("Messages").push().setValue(message)
     }
 
 }
