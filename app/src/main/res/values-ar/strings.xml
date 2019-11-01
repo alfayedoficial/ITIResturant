@@ -53,8 +53,6 @@
     <string name="ok"> موافق </string>
     <string name="arabic">اللغة العربية </string>
     <string name="english">اللغة الإنجليزية</string>
-
-
     <string name="emailRequired">البريد الإلكتروني مطلوب!</string>
     <string name="passwordRequired">كلمة المرور مطلوبة!</string>
     <string name="confPasswordRequired">تأكيد كلمة المرور مطلوبة!</string>
@@ -65,4 +63,7 @@
     <string name="errorSignUp">فشل أثناء التسجيل!\nحاول مجدداََ</string>
     <string name="signinSuccess">تم تسجيل الدخول بـ نجاح!</string>
     <string name="errorSignIn">فشل الدخول!\nالإيميل أو كلمة المرور غير صحيحة!</string>
+
+    <string name="valied_number">Please Provide Valied Number</string>
+    <string name="order_incomplete">Please Finish Processing Your Order First</string>
 </resources>

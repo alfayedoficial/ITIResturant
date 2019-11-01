@@ -4,27 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.FirstActivity">
+    tools:context=".view.activity.FirstActivity"
+    android:background="@drawable/background_first">
 
 
-    <Button
-        android:id="@+id/btnSignIn"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
-        android:text="Button"
+        android:layout_marginTop="330dp"
+        android:contentDescription="@string/fui_accessibility_logo"
+        android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSignIn"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Button"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btnsignin"
+        android:fontFamily="@font/showg"
+        android:text="@string/signin"
+        android:textColor="@color/background_offwhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btnsignup"
+        android:text="@string/sign_up"
+        android:fontFamily="@font/showg"
+        android:textColor="@color/background_offwhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
-        app:layout_constraintStart_toStartOf="@+id/btnSignIn"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+        app:layout_constraintStart_toStartOf="@+id/btnSignIn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,14 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FFC107</color>
-
     <!--	 // colors-->
     <color name="background_offwhite">#F6F8F5</color>
     <color name="home_color">#FFC107</color>
     <color name="text_shadow">#7F000000</color>
     <color name="text_shadow_white">#FFFFFF</color>
     <color name="editText">#717270</color>
-
     <!--	 // another colors-->
     <color name="color1">#2196F3</color>
     <color name="color2">#FF9800</color>
