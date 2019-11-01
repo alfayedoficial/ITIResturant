@@ -10,11 +10,15 @@ import kotlinx.android.synthetic.main.activity_display_item.*
 import kotlinx.android.synthetic.main.toolbar.*
 import android.text.Editable
 import com.bumptech.glide.Glide
+import java.util.*
+
+import android.widget.Toast
+
 
 class DisplayItemActivity : AppCompatActivity() {
 
-    lateinit var orderData: Order
-    lateinit var orderViewModel: MyOrderViewModel
+    private lateinit var orderData: Order
+    private lateinit var orderViewModel: MyOrderViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +29,7 @@ class DisplayItemActivity : AppCompatActivity() {
         initComponents()
     }
 
-    fun initComponents()
+    private fun initComponents()
     {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -40,8 +44,16 @@ class DisplayItemActivity : AppCompatActivity() {
         number_value.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
-                val totalValue =  s.toString().toDouble() * orderData.price
-                total.text = totalValue.toString()
+                val integers = "^[0-9]+$"
+                if(s.toString().matches(Regex(integers))) {
+                    val totalValue = s.toString().toInt() * orderData.price
+                    total.text = totalValue.toString()
+                }
+                else {
+                    total.text = ""
+                    number_value.setText("")
+                    Toast.makeText(applicationContext, R.string.valied_number,Toast.LENGTH_LONG).show()
+                }
             }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
@@ -51,6 +63,14 @@ class DisplayItemActivity : AppCompatActivity() {
             }
         })
 
-        order.setOnClickListener { orderViewModel.addOrder(orderData) }
+        order.setOnClickListener {
+            if (number_value.text.toString().isNotEmpty()) {
+                orderData.id = UUID.randomUUID().toString()
+                orderViewModel.addOrder(orderData)
+            }
+            else{
+                Toast.makeText(applicationContext, R.string.order_incomplete,Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }

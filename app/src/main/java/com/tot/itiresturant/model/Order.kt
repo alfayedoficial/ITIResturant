@@ -4,6 +4,15 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Order() :Parcelable {
+
+    var id:String
+        get() {
+            return id
+        }
+        set(id: String) {
+            this.id = id
+        }
+
     var name: String
         get() {
             return name
@@ -59,6 +68,7 @@ class Order() :Parcelable {
     }
 
     constructor(
+        id : String,
         name: String,
         price: Double,
         date: String,
@@ -67,6 +77,7 @@ class Order() :Parcelable {
         description: String,
         totalPrice: Double
     ) : this() {
+        this.id = id
         this.name = name
         this.price = price
         this.date = date

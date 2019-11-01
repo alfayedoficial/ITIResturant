@@ -16,7 +16,11 @@ import com.tot.itiresturant.view.activity.SignUpActivity
 import com.tot.itiresturant.viewmodel.SignInViewModel
 import com.tot.itiresturant.viewmodel.SignUpViewModel
 
-class Repository (val application: Application) {
+class Repository () {
+    lateinit var application: Application
+    constructor(application: Application):this(){
+        this.application = application
+    }
     internal var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private  var database: DatabaseReference = FirebaseDatabase.getInstance().reference
     private var signUpViewModel: SignUpViewModel = SignUpViewModel(application)
@@ -25,6 +29,7 @@ class Repository (val application: Application) {
     private lateinit var msgMutLiveData: MutableLiveData<List<ChatMessage>>
     private lateinit var orderArrayList: ArrayList<Order>
     private lateinit var notesArrayList: ArrayList<ChatMessage>
+
     init {
         orderArrayList= arrayListOf(Order())
         notesArrayList= arrayListOf(ChatMessage("","","",0))
@@ -56,10 +61,7 @@ class Repository (val application: Application) {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                     val order = dataSnapshot.getValue(Order::class.java)
-                    if (order == null) {
-                        orderArrayList.add(order!!)
-                    }
-
+                    orderArrayList.add(order!!)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
@@ -70,16 +72,32 @@ class Repository (val application: Application) {
         return mutableLiveData
     }
 
+    fun getAllOrdersOrderViewModel():List<Order>{
+        val orders:MutableList<Order>? = null
+        FirebaseDatabase.getInstance().reference.child("Orders")
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (order:DataSnapshot in dataSnapshot.children) {
+                        val orderValue = dataSnapshot.getValue(Order::class.java)
+                        if(orderValue != null)
+                            orders!!.add(orderValue)
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    println(""+databaseError.message)
+                }
+            })
+        return orders as List<Order>
+    }
+
     fun getAllNotes(): MutableLiveData<List<ChatMessage>> {
         FirebaseDatabase.getInstance().reference.child("Notes")
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                     val note = dataSnapshot.getValue(ChatMessage::class.java)
-                    if (note == null) {
-                        notesArrayList.add(note!!)
-                    }
-
+                    notesArrayList.add(note!!)
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
@@ -88,6 +106,24 @@ class Repository (val application: Application) {
             })
         msgMutLiveData.value=notesArrayList
         return msgMutLiveData
+    }
+
+    fun deleteOrders(){
+        FirebaseDatabase.getInstance().reference.child("Orders").removeValue()
+    }
+
+    fun insertOrder(order:Order)
+    {
+        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).setValue(order)
+    }
+
+    fun deleteOrder(order:Order){
+        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).removeValue()
+    }
+
+    fun updateOrder(order:Order){
+        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).removeValue()
+        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).setValue(order)
     }
 
     fun sendMessage(message: ChatMessage) {

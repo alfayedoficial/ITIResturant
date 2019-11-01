@@ -61,4 +61,6 @@
     <string name="errorSignUp">Failed when sign up!\nTry again!</string>
     <string name="signinSuccess">Login Successfully!</string>
     <string name="errorSignIn">Failed when login!\nEmail, pasword, or both are incorrect!</string>
+    <string name="valied_number">Please Provide Valied Number</string>
+    <string name="order_incomplete">Please Finish Processing Your Order First</string>
 </resources>
