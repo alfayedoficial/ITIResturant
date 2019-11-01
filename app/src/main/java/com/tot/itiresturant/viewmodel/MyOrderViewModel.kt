@@ -17,12 +17,12 @@ class MyOrderViewModel() : ViewModel() {
     private val repo:Repository = Repository()
 
     constructor(cartActivity: CartActivity) : this() {
-        mutableLiveData = MutableLiveData<List<Order>>()
+        mutableLiveData = MutableLiveData()
         this.cartActivity = cartActivity
     }
 
     constructor(myOrderFragment: MyOrderFragment) : this() {
-        mutableLiveData = MutableLiveData<List<Order>>()
+        mutableLiveData = MutableLiveData()
         this.myOrderFragment = myOrderFragment
     }
 
