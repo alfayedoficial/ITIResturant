@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.DisplayItemActivity">
+    tools:context=".view.activity.DisplayItemActivity"
+    android:background="@drawable/background_home">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -36,6 +37,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/description"
+                android:fontFamily="@font/tcb"
+                android:textSize="20sp"
+                android:textColor="@color/background_offwhite"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/meal" />
@@ -45,6 +49,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:fontFamily="@font/tcb"
+                android:textSize="16sp"
+                android:textColor="@color/offwhite"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -57,6 +69,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/price"
                 android:textStyle="bold"
+                android:fontFamily="@font/tcb"
+                android:textSize="20sp"
+                android:textColor="@color/background_offwhite"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
@@ -64,6 +79,9 @@
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tcb"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
                 android:layout_marginStart="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -76,6 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="17dp"
+                android:textColorHint="@color/background_offwhite"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toBottomOf="@+id/textView5">
@@ -83,12 +103,18 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/number_value"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/number"
                     android:inputType="number"
+                    android:background="@drawable/btnexittext"
+                    android:paddingStart="15dp"
+                    android:paddingLeft="15dp"
                     android:textColor="@color/colorAccent"
+                    android:textColorHighlight="@color/background_offwhite"
+                    android:textColorLink="@color/colorAccent"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -97,6 +123,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/total"
+                android:fontFamily="@font/tcb"
+                android:textSize="20sp"
+                android:textColor="@color/background_offwhite"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +136,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/tcb"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView8"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -114,15 +147,33 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/order"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn"
+                android:fontFamily="@font/tcb"
                 android:text="@string/orderNow"
+                android:textColor="@color/background_offwhite"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/total"
                 app:layout_constraintStart_toStartOf="@+id/total"
                 app:layout_constraintTop_toBottomOf="@+id/total" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fABtnChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                app:backgroundTint="@color/background_offwhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@drawable/ic_support" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

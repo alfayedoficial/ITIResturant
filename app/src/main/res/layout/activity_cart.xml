@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.CartActivity">
+    tools:context=".view.activity.CartActivity"
+    android:background="@drawable/background_home">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:id="@+id/cart_recycler"
+        android:layout_width="411dp"
+        android:layout_height="548dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +21,8 @@
         android:id="@+id/constraintLayout"
         android:layout_width="409dp"
         android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -30,7 +33,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/tcb"
             android:text="@string/totalcart"
+            android:textColor="@color/background_offwhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="100dp"
+            android:fontFamily="@font/tcb"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="@+id/textView4"
@@ -49,7 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/tcb"
             android:text="@string/tax"
+            android:textColor="@color/background_offwhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -58,6 +72,9 @@
             android:id="@+id/textViewTax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/tcb"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/textViewPrice"
             app:layout_constraintTop_toTopOf="@+id/textView7"
@@ -68,7 +85,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/tcb"
             android:text="@string/totalprice"
+            android:textColor="@color/background_offwhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -77,6 +98,9 @@
             android:id="@+id/textViewTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/tcb"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView11"
             app:layout_constraintStart_toStartOf="@+id/textViewTax"
             app:layout_constraintTop_toTopOf="@+id/textView11"
@@ -84,12 +108,18 @@
 
         <Button
             android:id="@+id/btnPayNow"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn"
             android:text="@string/payynow"
-            app:layout_constraintEnd_toEndOf="@+id/textViewTotal"
-            app:layout_constraintStart_toStartOf="@+id/textView11"
+            android:fontFamily="@font/tcb"
+            android:textSize="20sp"
+            android:textColor="@color/background_offwhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewTax"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

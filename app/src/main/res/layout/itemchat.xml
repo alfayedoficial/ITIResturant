@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-<ImageView
-    android:id="@+id/circularImgReceiver"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="10dp"
-    android:src="@drawable/owner"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.046"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/circularImgReceiver"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/txReceiverMessage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/circularImgReceiver"
-        app:layout_constraintEnd_toStartOf="@+id/circularImgSender"
-        app:layout_constraintStart_toEndOf="@+id/circularImgReceiver"
-        app:layout_constraintTop_toTopOf="@+id/circularImgReceiver"
-        tools:text="message" />
+        <TextView
+            android:id="@+id/txReceiverMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/background_offwhite"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImgReceiver"
+            app:layout_constraintEnd_toStartOf="@+id/circularImgSender"
+            app:layout_constraintStart_toEndOf="@+id/circularImgReceiver"
+            app:layout_constraintTop_toTopOf="@+id/circularImgReceiver"
+            tools:text="message" />
 
-    <ImageView
-        android:id="@+id/circularImgSender"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/circularImgReceiver" />
+        <ImageView
+            android:id="@+id/circularImgSender"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/circularImgReceiver" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

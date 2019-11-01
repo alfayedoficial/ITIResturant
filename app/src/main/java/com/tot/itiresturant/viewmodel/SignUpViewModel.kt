@@ -1,15 +1,13 @@
 package com.tot.itiresturant.viewmodel
 
-import android.app.Application
-import android.widget.Toast
-import androidx.lifecycle.AndroidViewModel
-import com.tot.itiresturant.R
+import android.content.Context
+import androidx.lifecycle.ViewModel
 import com.tot.itiresturant.repo.Repository
 import com.tot.itiresturant.view.activity.SignUpActivity
 
-class SignUpViewModel (application: Application) : AndroidViewModel(application) {
+class SignUpViewModel(context: Context) : ViewModel() {
 
-    private var repository: Repository = Repository(application)
+    private var repository: Repository = Repository(context)
     private var signUpActivity: SignUpActivity = SignUpActivity()
 
     fun newUser(emailAddress:String, password:String){
