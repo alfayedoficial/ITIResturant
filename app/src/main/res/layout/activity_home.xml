@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.Home">
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/home_CoordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <include
                 android:id="@+id/include2"
                 layout="@layout/toolbar"
@@ -29,12 +32,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/include2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_home"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/navi_header_layout"
-
         android:fitsSystemWindows="true"
-        app:menu="@menu/navi_drawer_menu"/>
+        app:headerLayout="@layout/navi_header_layout"
+        app:menu="@menu/navi_drawer_menu"
+        android:background="@color/colorAccent"
+
+        />
 </androidx.drawerlayout.widget.DrawerLayout>

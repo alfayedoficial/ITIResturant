@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.ProfileActivity">
+    tools:context=".view.activity.ProfileActivity"
+    android:background="@drawable/background_home">
 
 
     <ImageView
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
         android:layout_marginTop="84dp"
+        app:backgroundTint="@color/colorAccent"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
         android:scrollbarAlwaysDrawVerticalTrack="false"
         android:src="@drawable/ic_add_black_24dp"
@@ -39,6 +41,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:errorEnabled="true"
+        android:textColorHint="@color/background_offwhite"
         app:errorTextAppearance="@style/textinputlayoutErrorAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,10 +49,15 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:hint="@string/name"
+            android:layout_height="50dp"
             android:inputType="text"
+            android:background="@drawable/btnexittext"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
             android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/background_offwhite"
+            android:textColorLink="@color/colorAccent"
             android:textSize="14sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -61,6 +69,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:errorEnabled="true"
+        android:textColorHint="@color/background_offwhite"
         app:errorTextAppearance="@style/textinputlayoutErrorAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,10 +77,15 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phone"
-            android:inputType="textEmailAddress"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:background="@drawable/btnexittext"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
             android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/background_offwhite"
+            android:textColorLink="@color/colorAccent"
+            android:hint="@string/phone"
             android:textSize="14sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -83,6 +97,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:errorEnabled="true"
+        android:textColorHint="@color/background_offwhite"
         app:errorTextAppearance="@style/textinputlayoutErrorAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,20 +105,29 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/address"
-            android:inputType="textEmailAddress"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:background="@drawable/btnexittext"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
             android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/background_offwhite"
+            android:textColorLink="@color/colorAccent"
+            android:hint="@string/address"
             android:textSize="14sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/update"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/tcb"
+        android:textSize="20sp"
+        android:textColor="@color/background_offwhite"
         app:layout_constraintEnd_toEndOf="@+id/editText_address"
         app:layout_constraintStart_toStartOf="@+id/editText_address"
         app:layout_constraintTop_toBottomOf="@+id/editText_address" />

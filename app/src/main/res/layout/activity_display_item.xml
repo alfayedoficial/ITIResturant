@@ -150,17 +150,30 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="@string/orderNow"
+                android:layout_marginBottom="50dp"
                 android:background="@drawable/btn"
                 android:fontFamily="@font/tcb"
-                android:textStyle="bold"
-                android:textSize="20sp"
+                android:text="@string/orderNow"
                 android:textColor="@color/background_offwhite"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/total"
                 app:layout_constraintStart_toStartOf="@+id/total"
                 app:layout_constraintTop_toBottomOf="@+id/total" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fABtnChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                app:backgroundTint="@color/background_offwhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@drawable/ic_support" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
