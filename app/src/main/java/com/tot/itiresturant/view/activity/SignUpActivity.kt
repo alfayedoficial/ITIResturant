@@ -22,6 +22,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        signupViewModel = SignUpViewModel(applicationContext)
+
         btn_sign_up.setOnClickListener{
             signUp()
         }
@@ -40,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
         } else if (confPassword.text.toString().trim().isEmpty()){
             confPassword.error = getText(R.string.confPasswordRequired)
             confPassword.requestFocus()
-        } else if (password.text.toString().trim() == confPassword.text.toString().trim()){
+        } else if (password.text.toString().trim() != confPassword.text.toString().trim()){
             Toast.makeText(this, R.string.incompatiblePassword, Toast.LENGTH_SHORT).show()
         } else if (!isNetworkConnected()){
             Toast.makeText(this, R.string.networkError, Toast.LENGTH_SHORT).show()

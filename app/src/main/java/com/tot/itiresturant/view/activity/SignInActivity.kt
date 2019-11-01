@@ -20,6 +20,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+        signinViewModel = SignInViewModel(applicationContext)
         btn_sign_in.setOnClickListener{
             signIn()
         }
