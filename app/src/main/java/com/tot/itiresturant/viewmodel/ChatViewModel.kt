@@ -22,6 +22,6 @@ class ChatViewModel(var activity: Activity) : ViewModel(){
     }
 
     fun getAllMessages(): MutableLiveData<List<ChatMessage>> {
-        return repository.getAllNotes()
+        return repository.getAllMessages()
     }
 }
