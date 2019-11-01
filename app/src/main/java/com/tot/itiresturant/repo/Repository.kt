@@ -17,7 +17,7 @@ import com.tot.itiresturant.viewmodel.SignInViewModel
 import com.tot.itiresturant.viewmodel.SignUpViewModel
 
 class Repository () {
-    lateinit var application: Application
+    private lateinit var application: Application
     constructor(application: Application):this(){
         this.application = application
     }
