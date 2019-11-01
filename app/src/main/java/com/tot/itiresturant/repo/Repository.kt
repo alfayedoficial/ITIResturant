@@ -21,21 +21,15 @@ class Repository () {
     constructor(application: Application):this(){
         this.application = application
     }
-    internal var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private  var database: DatabaseReference = FirebaseDatabase.getInstance().reference
     private var signUpViewModel: SignUpViewModel = SignUpViewModel(application)
     private var signInViewModel: SignInViewModel = SignInViewModel(application)
-    private lateinit var mutableLiveData:MutableLiveData<ArrayList<Order>>
-    private lateinit var msgMutLiveData: MutableLiveData<List<ChatMessage>>
-    private lateinit var orderArrayList: ArrayList<Order>
-    private lateinit var notesArrayList: ArrayList<ChatMessage>
+    private var mutableLiveData:MutableLiveData<ArrayList<Order>> = MutableLiveData()
+    private var msgMutLiveData: MutableLiveData<List<ChatMessage>> = MutableLiveData()
+    private var orderArrayList: ArrayList<Order> = arrayListOf(Order())
+    private var notesArrayList: ArrayList<ChatMessage> = arrayListOf(ChatMessage("","","",0))
 
-    init {
-        orderArrayList= arrayListOf(Order())
-        notesArrayList= arrayListOf(ChatMessage("","","",0))
-        mutableLiveData=MutableLiveData()
-        msgMutLiveData=MutableLiveData()
-    }
     fun newUser(emailAddress:String, password:String){
         mAuth.createUserWithEmailAndPassword(emailAddress, password)
             .addOnSuccessListener {
@@ -74,7 +68,7 @@ class Repository () {
 
     fun getAllOrdersOrderViewModel():List<Order>{
         val orders:MutableList<Order>? = null
-        FirebaseDatabase.getInstance().reference.child("Orders")
+        database.child("Orders")
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     for (order:DataSnapshot in dataSnapshot.children) {
@@ -92,7 +86,7 @@ class Repository () {
     }
 
     fun getAllNotes(): MutableLiveData<List<ChatMessage>> {
-        FirebaseDatabase.getInstance().reference.child("Notes")
+        database.child("Notes")
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
@@ -109,21 +103,21 @@ class Repository () {
     }
 
     fun deleteOrders(){
-        FirebaseDatabase.getInstance().reference.child("Orders").removeValue()
+        database.child("Orders").removeValue()
     }
 
     fun insertOrder(order:Order)
     {
-        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).setValue(order)
+        database.child("Orders").child(order.id).setValue(order)
     }
 
     fun deleteOrder(order:Order){
-        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).removeValue()
+        database.child("Orders").child(order.id).removeValue()
     }
 
     fun updateOrder(order:Order){
-        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).removeValue()
-        FirebaseDatabase.getInstance().reference.child("Orders").child(order.id).setValue(order)
+        database.child("Orders").child(order.id).removeValue()
+        database.child("Orders").child(order.id).setValue(order)
     }
 
     fun sendMessage(message: ChatMessage) {
