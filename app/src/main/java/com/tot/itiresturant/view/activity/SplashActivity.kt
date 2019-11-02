@@ -13,8 +13,8 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.splash_main)
 
         durationOfWait()
-
     }
+
     private fun durationOfWait() {
         Handler().postDelayed({
             /* Create an Intent that will start the Menu-Activity. */

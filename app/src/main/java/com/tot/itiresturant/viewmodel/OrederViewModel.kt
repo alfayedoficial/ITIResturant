@@ -12,7 +12,7 @@ class OrederViewModel : ViewModel()  {
     lateinit var myHome: Home
     fun setHome(home: Home){
         myHome=home
-        repository= Repository(myHome.application)
+        repository= Repository(myHome)
     }
     fun getAllMenuItems(): MutableLiveData<ArrayList<Order>> {
         return repository.getAllOrders()

@@ -1,17 +1,17 @@
 package com.tot.itiresturant.view.activity
 
+import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.tot.itiresturant.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
-import android.content.Context.CONNECTIVITY_SERVICE
 import android.content.Intent
-import androidx.core.content.ContextCompat.getSystemService
 import android.net.ConnectivityManager
-import androidx.core.app.ComponentActivity.ExtraData
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.tot.itiresturant.viewmodel.SignUpViewModel
 
 class SignUpActivity : AppCompatActivity() {
@@ -22,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        signupViewModel = SignUpViewModel(applicationContext)
+        signupViewModel = ViewModelProviders.of(this,MyViewModelFactory(this)).get(SignUpViewModel::class.java)
 
         btn_sign_up.setOnClickListener{
             signUp()
@@ -64,6 +64,12 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
         } else {
             Toast.makeText(this, R.string.errorSignUp, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    internal class MyViewModelFactory(var activity: Activity) : ViewModelProvider.Factory {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return SignUpViewModel(activity) as T
         }
     }
 }

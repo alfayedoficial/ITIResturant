@@ -14,7 +14,7 @@ import com.tot.itiresturant.repo.Repository
 
 
 class ChatViewModel(var activity: Activity) : ViewModel(){
-    var repository: Repository = Repository(activity.application)
+    var repository: Repository = Repository(activity)
     var ownerMessage:ChatMessage = ChatMessage(activity.getString(R.string.app_name),activity.getString(R.string.owner_message))
     fun sendMessage(message: ChatMessage){
         repository.sendMessage(message)

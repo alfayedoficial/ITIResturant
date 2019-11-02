@@ -1,17 +1,22 @@
 package com.tot.itiresturant.repo
 
+import android.app.Activity
+import android.app.Application
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.tot.itiresturant.model.ChatMessage
 import com.tot.itiresturant.model.Order
+import com.tot.itiresturant.view.activity.SignInActivity
+import com.tot.itiresturant.view.activity.SignUpActivity
 import com.tot.itiresturant.viewmodel.SignInViewModel
 import com.tot.itiresturant.viewmodel.SignUpViewModel
 
 class Repository () {
 
-    private var context: Context? = null
+//    private var application: Application? = null
+    private var activity: Activity? = null
     private var signUpViewModel: SignUpViewModel? = null
     private var signInViewModel: SignInViewModel? = null
     private var mAuth: FirebaseAuth? = null
@@ -21,10 +26,21 @@ class Repository () {
     private var orderArrayList: ArrayList<Order>? = null
     private var messagesArrayList: ArrayList<ChatMessage>? = null
 
-    constructor(context: Context):this(){
-        this.context = context.applicationContext
-        signInViewModel = SignInViewModel(context)
-        signUpViewModel = SignUpViewModel(context)
+//    constructor(application: Application):this(){
+//        this.application = application
+//        signInViewModel = SignInViewModel(application)
+//        signUpViewModel = SignUpViewModel(application)
+//        mAuth = FirebaseAuth.getInstance()
+//        database = FirebaseDatabase.getInstance().reference
+//        mutableLiveData = MutableLiveData()
+//        msgMutLiveData = MutableLiveData()
+//        orderArrayList = arrayListOf(Order())
+//        messagesArrayList = arrayListOf(ChatMessage("","","",0))
+//    }
+    constructor(activity: Activity):this(){
+        this.activity = activity
+        signInViewModel = SignInViewModel(activity)
+        signUpViewModel = SignUpViewModel(activity)
         mAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
         mutableLiveData = MutableLiveData()

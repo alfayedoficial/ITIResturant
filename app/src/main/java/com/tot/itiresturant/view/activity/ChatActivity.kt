@@ -49,8 +49,6 @@ class ChatActivity : AppCompatActivity() {
     }
 
     internal class MyViewModelFactory(private val mActivity: Activity) : ViewModelProvider.Factory {
-
-
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             return ChatViewModel(mActivity) as T
         }
