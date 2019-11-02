@@ -28,12 +28,14 @@ lateinit var orderViewModel: OrederViewModel
 lateinit var homeAdapter: HomeAdapter
 lateinit var toolbarMenu: Toolbar
 lateinit var navigationView: NavigationView
+    // Language
    private val AR_lang = "ar"
    private val En_lang ="en"
    private var lang_Selected =""
     private val SELECTED_LANGUAGE = "language"
     private val LANGUAGE_IS_SELECTED ="SELECTED"
     private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
