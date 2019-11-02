@@ -64,7 +64,8 @@ lateinit var navigationView: NavigationView
         toolbarMenu=toolbar
         setSupportActionBar(toolbarMenu)
         supportActionBar!!.setDefaultDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_menu_foreground)
+        supportActionBar!!.setTitle("Home")
+        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_menu)
         toolbarMenu.title="Menu"
     }
     private fun setListener() {
